@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portafolio — BI financiero y visualizaciones en Power BI." />
+  <title>Andrés Ruiz Jaén | Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="header" id="top">
+    <div class="header-inner container">
+      <!-- Logo + nombre centrados -->
+      <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">
+          <img class="brand-logo" src="assets/mi_nuevo_logo.png" alt="Logo de Andrés Ruiz Jaén" />
+        </span>
+
+        <span class="brand-text">
+          <span class="brand-name">ANDRÉS</span>
+          <span class="brand-sub">RUIZ JAÉN</span>
+        </span>
+      </a>
+
+      <!-- Menú centrado + LinkedIn derecha -->
+      <div class="nav-row">
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Abrir menú</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <ul class="nav-menu" id="navMenu">
+            <li><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+            <li><a class="nav-link" href="index.html#visualizaciones">Visualizaciones</a></li>
+            <li><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+            <li><a class="nav-link" href="index.html#acerca">Acerca de mí</a></li>
+            <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Cambia el href por tu LinkedIn real -->
+        <a class="social" href="https://www.linkedin.com/in/tuusuario/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4.5 3.75a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5Z" fill="currentColor"/>
+            <path d="M3.5 9h2.1v11H3.5V9Z" fill="currentColor"/>
+            <path d="M8.2 9h2v1.5h.03c.4-.86 1.45-1.75 3-1.75 3.2 0 3.8 2.06 3.8 4.74V20h-2.1v-5.62c0-1.34-.02-3.06-2.03-3.06-2.04 0-2.35 1.52-2.35 2.96V20H8.2V9Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- VISOR (modo panel). Se activa si la URL tiene #viz=... -->
+    <section id="visor" class="section viz-viewer" aria-label="Visor de Power BI">
+      <div class="container">
+        <div class="viewer-head">
+          <div>
+            <h1 class="viewer-title" id="viewerTitle">Visualización</h1>
+            <p class="viewer-subtitle">
+              <a class="link" href="index.html#visualizaciones">← Volver a Visualizaciones</a>
+            </p>
+          </div>
+
+          <div class="viewer-actions">
+            <a class="btn btn-secondary" href="index.html#visualizaciones">Cerrar</a>
+            <a class="btn btn-primary" id="viewerOpenPbi" href="#" target="_blank" rel="noreferrer">Abrir en Power BI</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="embed-responsive">
+            <iframe
+              id="viewerIframe"
+              title="Panel Power BI"
+              src=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO NORMAL (se oculta cuando estás en modo visor) -->
+    <div class="site-sections">
+
+      <!-- GALERÍA SUPERIOR (por encima de Inicio) -->
+      <section class="top-gallery" aria-label="Ejemplos IBCS (muestra superior)">
+        <div class="container">
+          <div class="top-gallery-grid">
+            <figure class="top-gallery-card">
+              <img
+                src="assets/Grafico_Barras_Estilo_IBCS.png"
+                alt="Gráfico de barras estilo IBCS"
+                loading="lazy" />
+              <figcaption class="top-gallery-caption">Gráfico de Barras — Estilo IBCS</figcaption>
+            </figure>
+
+            <figure class="top-gallery-card">
+              <img
+                src="assets/Income_Statement_IBCS.png"
+                alt="Income Statement estilo IBCS"
+                loading="lazy" />
+              <figcaption class="top-gallery-caption">Income Statement — Estilo IBCS</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- INICIO / HOME -->
+      <section id="inicio" class="section home-hero">
+        <div class="container">
+          <header class="hero-header">
+            <h1>Power BI con ingeniería por dentro y diseño por fuera.</h1>
+            <p class="hero-subtitle">
+              Construyo paneles que cuentan una historia: KPIs bien definidos, ETL limpio, modelo semántico sólido y medidas DAX
+              que no se rompen con el tiempo. Y luego llega mi parte favorita: <strong>hacer que el dato “se vea”</strong> con
+              <strong>SVG integrados en DAX</strong> y rematados con <strong>HTML</strong>.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#visualizaciones" class="btn btn-primary">Quiero una demo / ejemplos</a>
+              <a href="#contacto" class="btn btn-secondary">Trabajemos juntos</a>
+            </div>
+          </header>
+
+          <div class="hero-promise">
+            <p>
+              Un buen dashboard no es el que tiene más gráficos: es el que responde más rápido.<br />
+              A tus preguntas, a tus equipos y a tu negocio.
+            </p>
+          </div>
+
+          <section class="hero-highlight" aria-label="Especialidad">
+            <h2>Me enamoré de los SVG en Power BI.</h2>
+            <p>
+              Descubrir que podía dibujar indicadores, iconos y microvisualizaciones desde una medida DAX fue un punto de no retorno.
+              Porque cuando el visual nativo no alcanza —cuando el renderizado de SVG es limitado en algunas visualizaciones— ahí es
+              donde empieza lo interesante: <strong>DAX como motor</strong>, <strong>SVG como lenguaje visual</strong> y
+              <strong>HTML como interfaz</strong>.
+            </p>
+            <p>
+              Resultado: informes más claros, más expresivos y con una experiencia de usuario que se nota desde el primer clic.
+            </p>
+          </section>
+
+          <section class="hero-capabilities" aria-label="Capacidades">
+            <div class="cap-grid">
+              <div class="cap-col">
+                <h3>Lo que hago (de forma completa):</h3>
+                <ul>
+                  <li>Definición de KPIs y lógica de negocio</li>
+                  <li>ETL y preparación de datos</li>
+                  <li>Modelo semántico: rendimiento, consistencia y escalabilidad</li>
+                  <li>Medidas DAX avanzadas, optimizadas y mantenibles</li>
+                </ul>
+              </div>
+
+              <div class="cap-col">
+                <h3>Lo que me diferencia (de verdad):</h3>
+                <ul>
+                  <li>SVG dinámicos: estados, iconos, barras, badges y microcharts</li>
+                  <li>Integración con HTML para layouts y UI informativa</li>
+                  <li>Soluciones creativas cuando los visuales nativos limitan el renderizado</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <footer class="hero-footer">
+            <h2>Si quieres que tus datos se entiendan rápido y se recuerden mejor, estás en el lugar correcto.</h2>
+            <p>
+              Cuéntame tu caso y te propongo una solución con impacto y enfoque práctico.
+            </p>
+            <a href="#contacto" class="btn btn-primary">Contactar</a>
+          </footer>
+        </div>
+      </section>
+
+      <!-- VISUALIZACIONES (ACTUALIZADO) -->
+      <section id="visualizaciones" class="section">
+        <div class="container">
+          <h2 class="section-title">Visualizaciones</h2>
+          <p class="section-desc">
+            Haz clic en una miniatura para abrir el panel en una pestaña nueva (con encabezado + embed Power BI).
+          </p>
+
+          <div class="viz-grid">
+
+            <!-- 1) Gráfico Barras IBCS -->
+            <a class="viz-card"
+               href="index.html#viz=grafico-barras-ibcs"
+               target="_blank"
+               rel="noreferrer">
+              <div class="viz-thumb">
+                <img src="assets/Grafico_Barras_Estilo_IBCS.png" alt="Miniatura - Gráfico de Barras Estilo IBCS" loading="lazy" />
+              </div>
+              <div class="viz-content">
+                <h3 class="viz-title">Gráfico Barras Estilo IBCS</h3>
+                <p class="viz-text">
+                  En este ejemplo, se analiza las ventas anuales de empresa, por meses a través de un gráfico de barras que sigue las normas IBCS. Creado en una matriz, visualización nativa de Power BI, todo está creado con svg.
+                </p>
+              </div>
+            </a>
+
+            <!-- 2) Waterfall IBCS -->
+            <a class="viz-card"
+               href="index.html#viz=waterfall-ibcs"
+               target="_blank"
+               rel="noreferrer">
+              <div class="viz-thumb">
+                <img src="assets/Waterfall_IBCS.png" alt="Miniatura - Waterfall Estilo IBCS" loading="lazy" />
+              </div>
+              <div class="viz-content">
+                <h3 class="viz-title">Waterfall Estilo IBCS</h3>
+                <p class="viz-text">
+                  En este ejemplo, se analiza la evolución de ventas de una empresa a través de un gráfico de columnas, con la comparativa año actual vs año anterior, en la parte superior un gráfico de cascada, de las variaciones de las ventas. Todo ello siguiendo las normas IBCS y creado con svg en una visualización HTML.
+                </p>
+              </div>
+            </a>
+
+            <!-- 3) Income Statement IBCS -->
+            <a class="viz-card"
+               href="index.html#viz=income-statement-ibcs"
+               target="_blank"
+               rel="noreferrer">
+              <div class="viz-thumb">
+                <img src="assets/Income_Statement_IBCS.png" alt="Miniatura - Income Statement Estilo IBCS" loading="lazy" />
+              </div>
+              <div class="viz-content">
+                <h3 class="viz-title">Income Statement Estilo IBCS</h3>
+                <p class="viz-text">
+                  En este ejemplo, se representa gráficamente un estado de resultados (Income Statement) siguiendo las normas IBCS. Se utilizan barras horizontales para mostrar los valores de cada partida, con colores que indican su naturaleza (ingresos, gastos, totales). Todo ello creado con svg en una visualización HTML.
+                </p>
+              </div>
+            </a>
+
+            <!-- 4) Tarjeta KPI HTML -->
+            <a class="viz-card"
+               href="index.html#viz=tarjeta-kpi-html"
+               target="_blank"
+               rel="noreferrer">
+              <div class="viz-thumb">
+                <img src="assets/Tarjeta_KPI_HTML.png" alt="Miniatura - Tarjeta KPI HTML" loading="lazy" />
+              </div>
+              <div class="viz-content">
+                <h3 class="viz-title">Tarjeta KPI HTML</h3>
+                <p class="viz-text">
+                  En este ejemplo, se muestra una tarjeta de KPI (Indicador Clave de Rendimiento) creada con HTML en Power BI. La tarjeta presenta el valor actual del KPI, su variación porcentual respecto al período anterior y un icono que indica la tendencia (ascendente o descendente). Todo ello diseñado para ofrecer una visualización clara y atractiva del rendimiento del indicador.
+                </p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section">
+        <div class="container">
+          <h2 class="section-title">Servicios</h2>
+          <p class="section-desc">Ejemplos de servicios (ajusta a tu oferta real).</p>
+
+          <div class="grid">
+            <article class="card card-mini">
+              <h3>Dashboards financieros</h3>
+              <p>P&amp;L, Balance, Cash Flow, control de gestión y reporting estratégico.</p>
+            </article>
+
+            <article class="card card-mini">
+              <h3>DAX y modelado</h3>
+              <p>Medidas robustas, optimización, modelo semántico y mantenibilidad.</p>
+            </article>
+
+            <article class="card card-mini">
+              <h3>Consultoría BI</h3>
+              <p>Definición de KPIs, validación de datos y mejora del proceso de reporting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACERCA DE MÍ -->
+      <section id="acerca" class="section">
+        <div class="container">
+          <h2 class="section-title">Acerca de mí</h2>
+          <p class="section-desc">
+            Perfil profesional orientado a BI financiero, reporting y cuadros de mando.
+          </p>
+
+          <div class="card about">
+            <div class="about-media">
+              <img class="about-photo" src="assets/Yo.jpg" alt="Foto profesional" loading="lazy" />
+            </div>
+
+            <div class="about-body">
+              <p class="text">
+                Después de más de 30 años como asesor contable y fiscal, encontré en Power BI una manera completamente nueva de mirar los números:
+                transformarlos en decisiones claras, visuales y accionables.
+              </p>
+
+              <p class="text">
+                Hoy combino mi experiencia financiera con herramientas de Business Intelligence para ayudar a empresas y profesionales a analizar,
+                visualizar y comunicar sus resultados con precisión. Mi enfoque une la rigurosidad contable con un diseño limpio y funcional,
+                siempre apoyándome en visualizaciones financieras nativas (sin visuales externos).
+              </p>
+
+              <p class="text">
+                Estoy especializado en Power BI, DAX, modelado de datos y cuadros de mando financieros (P&amp;L, Balance y Cash Flow),
+                así como en análisis de rentabilidad, control de gestión y reporting estratégico.
+              </p>
+
+              <p class="text">
+                Soy miembro de AECE (Asociación Profesional de Expertos Contables y Tributarios de España) desde 2004. Actualmente sigo en constante
+                aprendizaje y estoy abierto a colaboraciones, proyectos remotos y consultoría de BI financiero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section">
+        <div class="container">
+          <h2 class="section-title">Contacto</h2>
+          <p class="section-desc">
+            Cuéntame tu caso y te respondo con un enfoque práctico y orientado a resultados.
+          </p>
+
+          <div class="card contact-card">
+            <div class="contact-row">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">
+                <a class="link" href="mailto:andres_ruiz@arjasesores.com">andres_ruiz@arjasesores.com</a>
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">
+                <a class="link" href="https://www.linkedin.com/in/andres-ruiz-jaen/" target="_blank" rel="noreferrer">
+                  linkedin.com/in/andres-ruiz-jaen
+                </a>
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Propuesta</span>
+              <span class="contact-value">
+                <a class="btn btn-primary" href="mailto:andres_ruiz@arjasesores.com?subject=Consulta%20BI%20financiero">Escribirme</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Andrés Ruiz Jaén</span>
+      <a class="link" href="index.html#top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script>
+    // Año footer
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    // Menú móvil
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    navToggle?.addEventListener("click", () => {
+      const open = navMenu.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    navMenu?.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        navToggle?.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // ======= MODO VISOR: #viz=... =======
+    const VIZ = {
+      "grafico-barras-ibcs": {
+        title: "Gráfico Barras Estilo IBCS",
+        src: "https://app.powerbi.com/view?r=eyJrIjoiMzViNzk1OTEtN2U3Mi00MTAyLTgxMDItMjRhZjAwM2ExM2JkIiwidCI6ImUyMDM2YjEzLWFkMTYtNGJkMS1hMTZiLWI0YWMxYWViYjM0ZiIsImMiOjl9"
+      },
+      "waterfall-ibcs": {
+        title: "Waterfall Estilo IBCS",
+        src: "https://app.powerbi.com/view?r=eyJrIjoiMWI4NmFkMDEtMTIwMy00YjQyLWFhODAtMTg5N2E1OGY1MWYyIiwidCI6ImUyMDM2YjEzLWFkMTYtNGJkMS1hMTZiLWI0YWMxYWViYjM0ZiIsImMiOjl9"
+      },
+      "income-statement-ibcs": {
+        title: "Income Statement Estilo IBCS",
+        src: "https://app.powerbi.com/view?r=eyJrIjoiYjMxNDY0ODctZmFiZC00MzdjLWJlZDYtMzhjNjZkYWZlOWQxIiwidCI6ImUyMDM2YjEzLWFkMTYtNGJkMS1hMTZiLWI0YWMxYWViYjM0ZiIsImMiOjl9"
+      },
+      "tarjeta-kpi-html": {
+        title: "Tarjeta KPI HTML",
+        src: "https://app.powerbi.com/view?r=eyJrIjoiYzFmMDNiMGItZDEyOC00NzMyLWFlNWEtNmZmZTc0YjE0N2I3IiwidCI6ImUyMDM2YjEzLWFkMTYtNGJkMS1hMTZiLWI0YWMxYWViYjM0ZiIsImMiOjl9"
+      }
+    };
+
+    function getVizKeyFromHash() {
+      const h = window.location.hash || "";
+      if (!h.startsWith("#viz=")) return null;
+      return decodeURIComponent(h.replace("#viz=", "").trim());
+    }
+
+    function applyViewerMode() {
+      const key = getVizKeyFromHash();
+      const viewer = document.getElementById("visor");
+      const site = document.querySelector(".site-sections");
+      const iframe = document.getElementById("viewerIframe");
+      const titleEl = document.getElementById("viewerTitle");
+      const openBtn = document.getElementById("viewerOpenPbi");
+
+      if (!viewer || !site || !iframe || !titleEl || !openBtn) return;
+
+      if (!key || !VIZ[key]) {
+        document.body.classList.remove("viewer-mode");
+        viewer.style.display = "none";
+        site.style.display = "block";
+        iframe.src = "";
+        return;
+      }
+
+      const data = VIZ[key];
+      titleEl.textContent = data.title;
+      iframe.src = data.src;
+      openBtn.href = data.src;
+
+      document.body.classList.add("viewer-mode");
+      viewer.style.display = "block";
+      site.style.display = "none";
+
+      // Asegura que se vea el panel arriba
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    window.addEventListener("hashchange", applyViewerMode);
+    applyViewerMode();
+  </script>
+</body>
+</html>
